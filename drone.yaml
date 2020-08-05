@@ -16,8 +16,7 @@ steps:
     repo: luisredda/drone-python-starter
     auto_tag: true
 - name: harnessdeploy
-   image: luisredda/drone-simple-plugin
-   settings:
+  image: luisredda/drone-simple-plugin
     application: "ECommerce"
     pipeline: "Deploy to K8s"
     service: "${DRONE_REPO_NAME}"
