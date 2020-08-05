@@ -15,3 +15,16 @@ steps:
       from_secret: p_docker
     repo: luisredda/drone-python-starter
     auto_tag: true
+  harness-deploy:
+    image: luisredda/drone-simple-plugin
+    application: "ECommerce"
+    pipeline: "Deploy to K8s"
+    service: "${DRONE_REPO_NAME}"
+    build: "${DRONE_TAG}"
+    accountid:
+      from_secret: harness_acctid
+    apikey: 
+      from_secret: harness_secret
+    body: |
+      any other payload here
+
