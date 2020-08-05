@@ -15,7 +15,7 @@ steps:
       from_secret: p_docker
     repo: luisredda/drone-python-starter
     auto_tag: true
-- name: harness
+- name: harness-deploy
   image: luisredda/drone-simple-plugin
   settings:  
     application: "ECommerce"
